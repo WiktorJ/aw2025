@@ -17,7 +17,7 @@ nav {
     width: 100%;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 nav ul {
@@ -46,7 +46,7 @@ header {
 }
 
 .hero {
-    background-color: rgba(255,255,255,0.8);
+    background-color: rgba(255, 255, 255, 0.8);
     padding: 2rem;
     border-radius: 10px;
 }
@@ -79,7 +79,7 @@ section {
     background-color: #f9f9f9;
     padding: 2rem;
     border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .rsvp-button, .registry-button {
@@ -125,6 +125,7 @@ footer {
         font-size: 3rem;
     }
 }
+
 /* Previous CSS remains the same until .details-container */
 
 .travel-container {
@@ -146,7 +147,7 @@ footer {
     padding: 1.5rem;
     margin: 1rem 0;
     border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .map-container {
@@ -159,7 +160,7 @@ footer {
     width: 100%;
     height: 100%;
     border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .faq-container {
@@ -172,7 +173,7 @@ footer {
     padding: 1.5rem;
     margin: 1rem 0;
     border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: left;
 }
 
@@ -189,4 +190,40 @@ footer {
     .map-container {
         height: 300px;
     }
+}
+
+.language-switcher {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1001;
+    display: flex;
+    gap: 10px;
+}
+
+.lang-btn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.lang-btn:hover {
+    transform: translateY(-2px);
+}
+
+.lang-btn img {
+    width: 20px;
+    height: auto;
+}
+
+/* Adjust the nav padding to account for language switcher */
+nav {
+    padding-top: 70px;
 }

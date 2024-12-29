@@ -11,20 +11,29 @@
           rel="stylesheet">
 </head>
 <body>
+<div class="language-switcher">
+    <button class="lang-btn" onclick="changeLanguage('pl')">
+        <img src="pl-flag.png" alt="Polish"/> Polski
+    </button>
+    <button class="lang-btn" onclick="changeLanguage('el')">
+        <img src="el-flag.png" alt="Greek"/> Ελληνικά
+    </button>
+</div>
+
 <nav>
     <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#details">Details</a></li>
-        <li><a href="#travel">Travel</a></li>
-        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#home" data-pl="Start" data-el="Αρχική">Home</a></li>
+        <li><a href="#details" data-pl="Szczegóły" data-el="Λεπτομέρειες">Details</a></li>
+        <li><a href="#travel" data-pl="Dojazd" data-el="Ταξίδι">Travel</a></li>
+        <li><a href="#faq" data-pl="FAQ" data-el="Συχνές ερωτήσεις">FAQ</a></li>
     </ul>
 </nav>
 
 <header id="home">
     <div class="hero">
         <h1>Anastasia & Wiktor</h1>
-        <h2>Are getting married!</h2>
-        <p class="date">August 23, 2025</p>
+        <h2 data-pl="Pobierają się!" data-el="Παντρεύονται!">Are getting married!</h2>
+        <p class="date">23 August 2025</p>
     </div>
 </header>
 
@@ -109,4 +118,5 @@
     <p>Contact us at: wedding@anastasiaandwiktor.com</p> <!-- Updated email -->
 </footer>
 </body>
+<script src="translations.js"></script>
 </html>

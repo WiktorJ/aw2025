@@ -227,3 +227,61 @@ footer {
 nav {
     padding-top: 70px;
 }
+
+
+.venue-block {
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.venue-details h4 {
+    color: #9c8167;
+    margin-bottom: 0.5rem;
+}
+
+.venue-details .time {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 0.5rem 0;
+}
+
+.venue-details .note {
+    font-style: italic;
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+.maps-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    flex: 1;
+}
+
+.map-block {
+    flex: 1;
+}
+
+.map-block h4 {
+    margin-bottom: 1rem;
+    color: #9c8167;
+}
+
+.map-block iframe {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .maps-container {
+        gap: 1rem;
+    }
+
+    .map-block iframe {
+        height: 250px;
+    }
+}

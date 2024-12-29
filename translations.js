@@ -7,7 +7,9 @@ const translations = {
         'faq-title': 'Często Zadawane Pytania',
         'dress-code-q': 'Jaki jest dress code?',
         'dress-code-a': 'Strój formalny. Panowie proszeni są o garnitury, a panie o sukienki koktajlowe lub stroje wieczorowe.',
-        // Add more Polish translations
+        'ceremony-venue': 'Miejsce Ceremonii',
+        'reception-venue': 'Miejsce Przyjęcia',
+        'venues-travel': 'Lokalizacje i Dojazd',
     },
     el: {
         'wedding-announcement': 'Παντρεύονται!',
@@ -17,7 +19,9 @@ const translations = {
         'faq-title': 'Συχνές Ερωτήσεις',
         'dress-code-q': 'Ποιος είναι ο κώδικας ένδυσης;',
         'dress-code-a': 'Επίσημο ένδυμα. Οι άνδρες παρακαλούνται να φορούν κοστούμια και οι γυναίκες κοκτέιλ φορέματα ή βραδινά.',
-        // Add more Greek translations
+        'ceremony-venue': 'Χώρος Τελετής',
+        'reception-venue': 'Χώρος Δεξίωσης',
+        'venues-travel': 'Τοποθεσίες και Πληροφορίες',
     }
 };
 

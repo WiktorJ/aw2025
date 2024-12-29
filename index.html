@@ -12,26 +12,61 @@
 </head>
 <body>
 <div class="language-switcher">
-    <button class="lang-btn" onclick="changeLanguage('pl')">
-        <img src="pl-flag.png" alt="Polish"/> Polski
-    </button>
-    <button class="lang-btn" onclick="changeLanguage('el')">
-        <img src="el-flag.png" alt="Greek"/> Ελληνικά
-    </button>
+
 </div>
 
-<nav>
-    <ul>
-        <li><a href="#home" data-pl="Start" data-el="Αρχική">Home</a></li>
-        <li><a href="#travel-to-samos" data-pl="Podróż" data-el="ταξίδι">Travel</a></li>
-        <li><a href="#wedding-day-guide" data-pl="Dzien Slubu" data-el="Θέση">Place</a></li>
-        <li><a href="#accommodation" data-pl="Zakwaterowanie" data-el="κατάλυμα">Accommodation</a></li>
-        <li><a href="#dress-code" data-pl="Ubiór" data-el="ενδυματολογικός κώδικας">Dress-code</a></li>
-        <li><a href="#afterparty" data-pl="Poprawiny" data-el="Afterparty">Dress-code</a></li>
-        <li><a href="#samos-guide" data-pl="Samos-Przewodnik" data-el="Οδηγός Σάμου">Samos Guide</a></li>
-        <li><a href="#contact" data-pl="Kontakt" data-el="Επαφή">Samos Guide</a></li>
-    </ul>
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="logo">
+            <span>A & W</span>
+        </div>
+
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <ul class="nav-menu">
+            <!-- Your existing nav items -->
+<!--            <li><a href="#wedding-day-guide" class="translate-nav-schedule">Schedule</a></li>-->
+<!--            <li><a href="#travel-to-samos" class="translate-nav-travel">Travel</a></li>-->
+<!--            <li><a href="#samos-guide" class="translate-nav-guide">Guide</a></li>-->
+<!--            <li><a href="#contact" class="translate-nav-contact">Contact</a></li>-->
+            <li><a href="#wedding-date-banner" data-pl="Start" data-el="Αρχική">Home</a></li>
+            <li><a href="#travel-to-samos" data-pl="Podróż" data-el="ταξίδι">Travel</a></li>
+            <li><a href="#wedding-day-guide" data-pl="Dzien Slubu" data-el="Θέση">Place</a></li>
+            <li><a href="#accommodation" data-pl="Zakwaterowanie" data-el="κατάλυμα">Accommodation</a></li>
+            <li><a href="#dress-code" data-pl="Ubiór" data-el="ενδυματολογικός κώδικας">Dress-code</a></li>
+            <li><a href="#afterparty" data-pl="Poprawiny" data-el="Afterparty">Dress-code</a></li>
+            <li><a href="#samos-guide" data-pl="Samos-Przewodnik" data-el="Οδηγός Σάμου">Samos Guide</a></li>
+            <li><a href="#contact" data-pl="Kontakt" data-el="Επαφή">Samos Guide</a></li>
+            <li class="language-selector">
+                <!-- Your existing language buttons -->
+                <button class="lang-btn" onclick="changeLanguage('pl')">
+                    <img src="pl-flag.png" alt="Polish"/> Polski
+                </button>
+                <button class="lang-btn" onclick="changeLanguage('el')">
+                    <img src="el-flag.png" alt="Greek"/> Ελληνικά
+                </button>
+            </li>
+        </ul>
+    </div>
 </nav>
+
+
+<!--<nav>-->
+<!--    <ul>-->
+<!--        <li><a href="#wedding-date-banner" data-pl="Start" data-el="Αρχική">Home</a></li>-->
+<!--        <li><a href="#travel-to-samos" data-pl="Podróż" data-el="ταξίδι">Travel</a></li>-->
+<!--        <li><a href="#wedding-day-guide" data-pl="Dzien Slubu" data-el="Θέση">Place</a></li>-->
+<!--        <li><a href="#accommodation" data-pl="Zakwaterowanie" data-el="κατάλυμα">Accommodation</a></li>-->
+<!--        <li><a href="#dress-code" data-pl="Ubiór" data-el="ενδυματολογικός κώδικας">Dress-code</a></li>-->
+<!--        <li><a href="#afterparty" data-pl="Poprawiny" data-el="Afterparty">Dress-code</a></li>-->
+<!--        <li><a href="#samos-guide" data-pl="Samos-Przewodnik" data-el="Οδηγός Σάμου">Samos Guide</a></li>-->
+<!--        <li><a href="#contact" data-pl="Kontakt" data-el="Επαφή">Samos Guide</a></li>-->
+<!--    </ul>-->
+<!--</nav>-->
 
 <section id="wedding-date-banner">
     <div class="date-banner-container">

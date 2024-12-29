@@ -125,3 +125,68 @@ footer {
         font-size: 3rem;
     }
 }
+/* Previous CSS remains the same until .details-container */
+
+.travel-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.travel-info {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+}
+
+.hotel-block {
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.map-container {
+    flex: 1;
+    min-width: 300px;
+    height: 450px;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 2rem auto;
+}
+
+.faq-item {
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.faq-item h3 {
+    color: #9c8167;
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .travel-container {
+        flex-direction: column;
+    }
+
+    .map-container {
+        height: 300px;
+    }
+}

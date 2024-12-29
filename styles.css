@@ -36,6 +36,17 @@ nav ul li a {
     font-weight: 500;
 }
 
+.navbar {
+    /* ... existing styles ... */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Higher z-index to stay on top */
+    background-color: rgba(255, 255, 255, 0.95); /* Semi-transparent background */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
 header {
     height: 100vh;
     background: url('wedding-background.jpg') center/cover;
@@ -548,4 +559,563 @@ nav {
     .ports-info li {
         padding: 1rem 0.5rem;
     }
+}
+
+#samos-guide {
+    padding: 4rem 2rem;
+    background-color: #fff;
+}
+
+.guide-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.guide-section {
+    margin-bottom: 4rem;
+}
+
+.guide-section h3 {
+    color: #9c8167;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.guide-content {
+    padding: 1rem;
+}
+
+.recommendation-box {
+    background-color: #f9f9f9;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.recommendation-box h4 {
+    color: #9c8167;
+    margin-bottom: 1rem;
+}
+
+.attractions-grid,
+.beach-grid,
+.restaurant-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.attraction-card,
+.beach-card,
+.restaurant-card {
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.attraction-card:hover,
+.beach-card:hover,
+.restaurant-card:hover {
+    transform: translateY(-5px);
+}
+
+.attraction-card h4,
+.beach-card h4,
+.restaurant-card h4 {
+    color: #9c8167;
+    margin-bottom: 1rem;
+}
+
+.restaurant-card .venue {
+    margin-top: 1rem;
+}
+
+.restaurant-card h5 {
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .guide-section {
+        margin-bottom: 3rem;
+    }
+
+    .attractions-grid,
+    .beach-grid,
+    .restaurant-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .recommendation-box {
+        padding: 1.5rem;
+    }
+}
+
+#wedding-day-guide {
+    padding: 4rem 2rem;
+    background-color: #f9f9f9;
+}
+
+.timeline-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.date-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.date-header h3 {
+    color: #9c8167;
+    font-size: 2rem;
+    font-family: 'Great Vibes', cursive;
+}
+
+.timeline {
+    position: relative;
+    padding: 2rem 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 180px; /* Increased from 75px to accommodate hours */
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #9c8167;
+}
+
+.timeline-event {
+    display: flex;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.time-block {
+    width: 180px; /* Increased from 150px */
+    text-align: right;
+    padding-right: 2rem;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 2; /* Ensure time is above the line */
+}
+
+.time-block h4 {
+    color: #9c8167;
+    font-size: 1.5rem;
+    font-weight: 500;
+    background-color: #f9f9f9; /* Add background to prevent line showing through */
+    display: inline-block;
+    padding: 0 10px;
+}
+
+.event-content {
+    flex-grow: 1;
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-left: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* Update mobile styles */
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 40px; /* Adjusted for mobile */
+    }
+
+    .timeline-event {
+        flex-direction: column;
+    }
+
+    .time-block {
+        width: auto;
+        text-align: left;
+        padding-left: 70px; /* Increased padding */
+        margin-bottom: 1rem;
+    }
+
+    .time-block h4 {
+        padding-left: 0;
+    }
+
+    .event-content {
+        margin-left: 70px; /* Match padding-left of time-block */
+    }
+}
+
+
+.event-content.highlight {
+    border: 2px solid #9c8167;
+}
+
+.event-content h4 {
+    color: #9c8167;
+    margin-bottom: 1rem;
+}
+
+.location-details {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+
+.address {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    color: #666;
+}
+
+.map-container.mini {
+    height: 200px;
+    margin: 1rem 0;
+}
+
+.map-container.mini iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+.transportation-notice {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #fff3cd;
+    border-radius: 8px;
+    border-left: 4px solid #ffeeba;
+}
+
+.transportation-notice p {
+    color: #856404;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 30px;
+    }
+
+    .timeline-event {
+        flex-direction: column;
+    }
+
+    .time-block {
+        width: auto;
+        text-align: left;
+        padding-left: 60px;
+        margin-bottom: 1rem;
+    }
+
+    .event-content {
+        margin-left: 60px;
+    }
+}
+
+#afterparty {
+    padding: 3rem 2rem;
+    background-color: #fff;
+    margin-top: -2rem; /* To connect with wedding day guide section */
+}
+
+.afterparty-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.afterparty-content {
+    text-align: center;
+}
+
+.afterparty-content h2 {
+    color: #9c8167;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    font-family: 'Great Vibes', cursive;
+}
+
+.date-time {
+    margin-bottom: 2rem;
+}
+
+.date-time h3 {
+    color: #666;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.date-time .time {
+    font-size: 1.2rem;
+    color: #9c8167;
+    font-weight: 500;
+}
+
+.afterparty-details {
+    text-align: left;
+}
+
+.invitation {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #444;
+}
+
+.location-info {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.address-block {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    color: #666;
+    justify-content: center;
+}
+
+.notes {
+    background-color: #e8f4f8;
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 4px solid #9c8167;
+    margin-top: 1.5rem;
+}
+
+.notes p {
+    color: #444;
+    margin: 0;
+    text-align: center;
+}
+
+/* Add this to your existing media queries */
+@media (max-width: 768px) {
+    #afterparty {
+        padding: 2rem 1rem;
+    }
+
+    .afterparty-container {
+        padding: 1.5rem;
+    }
+
+    .invitation {
+        font-size: 1rem;
+    }
+}
+
+#wedding-date-banner {
+    padding: 4rem 0;
+    background-color: #f9f9f9;
+    position: relative;
+    overflow: hidden;
+}
+
+#wedding-date-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #9c8167, transparent);
+}
+
+#wedding-date-banner::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #9c8167, transparent);
+}
+
+.date-banner-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.date-content {
+    text-align: center;
+    position: relative;
+}
+
+.names h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 4rem;
+    color: #9c8167;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.date-display {
+    margin: 3rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.date-block {
+    background: white;
+    padding: 2rem 4rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    position: relative;
+    border: 1px solid rgba(156, 129, 103, 0.2);
+}
+
+.date-block::before,
+.date-block::after {
+    content: '❦';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #9c8167;
+    font-size: 1.5rem;
+}
+
+.date-block::before {
+    left: -2rem;
+}
+
+.date-block::after {
+    right: -2rem;
+}
+
+.month {
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+    color: #9c8167;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.day {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #333;
+    line-height: 1;
+    margin: 0.5rem 0;
+    font-family: 'Great Vibes', cursive;
+}
+
+.year {
+    font-size: 1.8rem;
+    color: #9c8167;
+    letter-spacing: 2px;
+    margin-top: 0.5rem;
+}
+
+.location {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    letter-spacing: 4px;
+    color: #666;
+    text-transform: uppercase;
+}
+
+/* Add decorative elements */
+.date-content::before,
+.date-content::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #9c8167, transparent);
+    top: 50%;
+}
+
+.date-content::before {
+    left: 0;
+}
+
+.date-content::after {
+    right: 0;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .names h1 {
+        font-size: 3rem;
+    }
+
+    .date-block {
+        padding: 1.5rem 2rem;
+    }
+
+    .month {
+        font-size: 1.2rem;
+    }
+
+    .day {
+        font-size: 3rem;
+    }
+
+    .year {
+        font-size: 1.5rem;
+    }
+
+    .location {
+        font-size: 1rem;
+        letter-spacing: 2px;
+    }
+
+    .date-block::before,
+    .date-block::after {
+        display: none;
+    }
+}
+
+/* Add some animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.names h1,
+.date-block,
+.location {
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.date-block {
+    animation-delay: 0.3s;
+}
+
+.location {
+    animation-delay: 0.6s;
+}
+
+#wedding-date-banner {
+    padding: 4rem 0;
+    background-color: #f9f9f9;
+    position: relative;
+    overflow: hidden;
+    margin-top: 80px; /* Add margin to account for fixed navbar height */
 }

@@ -23,9 +23,10 @@
 <nav>
     <ul>
         <li><a href="#home" data-pl="Start" data-el="Αρχική">Home</a></li>
-        <li><a href="#details" data-pl="Szczegóły" data-el="Λεπτομέρειες">Details</a></li>
-        <li><a href="#travel" data-pl="Dojazd" data-el="Ταξίδι">Travel</a></li>
-        <li><a href="#faq" data-pl="FAQ" data-el="Συχνές ερωτήσεις">FAQ</a></li>
+        <li><a href="#place" data-pl="Miejsce" data-el="Θέση">Place</a></li>
+        <li><a href="#travel-to-samos" data-pl="Podróż" data-el="ταξίδι">Travel</a></li>
+        <li><a href="#accommodation" data-pl="Zakwaterowanie" data-el="κατάλυμα">Accommodation</a></li>
+        <li><a href="#dress-code" data-pl="Ubiór" data-el="ενδυματολογικός κώδικας">Dress-code</a></li>
     </ul>
 </nav>
 
@@ -37,10 +38,10 @@
     </div>
 </header>
 
-<section id="travel">
-    <h2 class="translate-travel-title">Venues & Travel Information</h2>
-    <div class="travel-container">
-        <div class="travel-info">
+<section id="place">
+    <h2 class="translate-place-title">Venues & Travel Information</h2>
+    <div class="place-container">
+        <div class="place-info">
             <div class="venue-block">
                 <h3 class="translate-ceremony-venue">Ceremony Venue</h3>
                 <div class="venue-details">
@@ -100,31 +101,202 @@
     </div>
 </section>
 
+<section id="travel-to-samos">
+    <h2 class="translate-travel-to-samos-title">Getting to Samos</h2>
+    <div class="travel-info-container">
+        <div class="travel-options">
+            <div class="travel-option air">
+                <h3 data-pl="Podróż Samolotem" data-el="Ταξίδι με Αεροπλάνο">Travel by Air</h3>
 
-<section id="faq">
-    <h2>Frequently Asked Questions</h2>
-    <div class="faq-container">
-        <div class="faq-item">
-            <h3>What is the dress code?</h3>
-            <p>The dress code is formal. Men are encouraged to wear suits, and women should wear cocktail dresses or
-                evening wear.</p>
+                <div class="airport-info">
+                    <h4 data-pl="Port Lotniczy Samos" data-el="Αεροδρόμιο Σάμου">Samos International Airport</h4>
+                    <p class="flight-time"
+                       data-pl="Czas lotu z Aten: około 1 godziny"
+                       data-el="Χρόνος πτήσης από την Αθήνα: περίπου 1 ώρα">
+                        Flight time from Athens: approximately 1 hour
+                    </p>
+                    <div class="map-container small">
+                        <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3177.528644017214!2d26.910562776977847!3d37.68945657191347!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bc141d9676eb6d%3A0x5f9956c8af51f4b4!2sSamos%20International%20Airport!5e0!3m2!1sen!2sus!4v1702306093292!5m2!1sen!2sus"
+                                width="400"
+                                height="300"
+                                style="border:0;"
+                                allowfullscreen=""
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+
+                <div class="flight-routes">
+                    <h4 data-pl="Opcje Lotów" data-el="Επιλογές Πτήσεων">Flight Options</h4>
+                    <ul>
+                        <li data-pl="Najpopularniejsza opcja: lot do Aten, a następnie przesiadka na lot do Samos"
+                            data-el="Η πιο συνηθισμένη επιλογή: πτήση προς Αθήνα και στη συνέχεια ανταπόκριση για Σάμο">
+                            Most common route: Flight to Athens, then connect to Samos
+                        </li>
+                        <li data-pl="W sezonie letnim dostępne są również bezpośrednie loty z niektórych miast europejskich"
+                            data-el="Κατά τη διάρκεια του καλοκαιριού υπάρχουν επίσης απευθείας πτήσεις από ορισμένες ευρωπαϊκές πόλεις">
+                            During summer season, direct flights are available from some European cities
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="travel-option sea">
+                <h3 data-pl="Podróż Promem" data-el="Ταξίδι με Πλοίο">Travel by Sea</h3>
+
+                <div class="ferry-info">
+                    <h4 data-pl="Połączenia Promowe" data-el="Ακτοπλοϊκές Συνδέσεις">Ferry Connections</h4>
+                    <p class="journey-time"
+                       data-pl="Czas podróży z Aten: ponad 10 godzin"
+                       data-el="Χρόνος ταξιδιού από την Αθήνα: πάνω από 10 ώρες">
+                        Journey time from Athens: over 10 hours
+                    </p>
+
+                    <div class="ports-info">
+                        <h5 data-pl="Porty na Samos" data-el="Λιμάνια της Σάμου">Ports in Samos</h5>
+                        <ul>
+                            <li>
+                                <strong>Karlovasi</strong>
+                                <div class="map-container mini">
+                                    <iframe
+                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12711.155757515543!2d26.926985!3d37.796637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bc15b8c4e8b889%3A0x400bd2ce2b97cc0!2sKarlovasi%20Port!5e0!3m2!1sen!2sus!4v1702306093292!5m2!1sen!2sus"
+                                            width="300"
+                                            height="200"
+                                            style="border:0;"
+                                            allowfullscreen=""
+                                            loading="lazy"
+                                            referrerpolicy="no-referrer-when-downgrade">
+                                    </iframe>
+                                </div>
+                            </li>
+                            <li>
+                                <strong>Vathy</strong>
+                                <div class="map-container mini">
+                                    <iframe
+                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12706.647558161777!2d26.971083!3d37.754144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bc17858b440001%3A0x400bd2ce2b9bf00!2sVathy%20Port!5e0!3m2!1sen!2sus!4v1702306093292!5m2!1sen!2sus"
+                                            width="300"
+                                            height="200"
+                                            style="border:0;"
+                                            allowfullscreen=""
+                                            loading="lazy"
+                                            referrerpolicy="no-referrer-when-downgrade">
+                                    </iframe>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="accommodation">
+    <h2 class="translate-accommodation-title">Accommodation</h2>
+    <div class="accommodation-container">
+        <div class="hotel-info">
+            <h3>Les Maisonettes</h3>
+            <div class="hotel-details">
+                <p class="hotel-confirmation"
+                   data-pl="Dla wszystkich gości zarezerwowaliśmy jedną noc po weselu w Les Maisonettes w Kokkari."
+                   data-el="Έχουμε κάνει κράτηση για όλους τους καλεσμένους για μία νύχτα μετά τον γάμο στο Les Maisonettes στο Κοκκάρι.">
+                    We have booked one night after the wedding for all guests at Les Maisonettes in Kokkari.
+                </p>
+
+                <div class="extended-stay-info">
+                    <h4 data-pl="Przedłużenie Pobytu"
+                        data-el="Επέκταση Διαμονής">
+                        Extended Stay
+                    </h4>
+                    <p data-pl="Jeśli chcielibyście przedłużyć swój pobyt w hotelu, możecie zarezerwować dodatkowe noce z rabatem, powołując się na wesele Anastasii i Wiktora."
+                       data-el="Εάν επιθυμείτε να παρατείνετε τη διαμονή σας στο ξενοδοχείο, μπορείτε να κάνετε κράτηση για επιπλέον νύχτες με έκπτωση αναφέροντας τον γάμο της Αναστασίας και του Βίκτωρα.">
+                        If you would like to extend your stay at the hotel, you can book additional nights with a discount by mentioning Anastasia and Wiktor's wedding.
+                    </p>
+                </div>
+
+                <div class="contact-info">
+                    <h4 data-pl="Kontakt do Hotelu"
+                        data-el="Επικοινωνία με το Ξενοδοχείο">
+                        Hotel Contact
+                    </h4>
+                    <p>
+                        <span data-pl="Telefon" data-el="Τηλέφωνο">Phone</span>:
+                        <a href="tel:+302273092920">+30 2273 092920</a>
+                    </p>
+                    <p>
+                        <span data-pl="Email" data-el="Email">Email</span>:
+                        <a href="mailto:info@lesmaisonettes.gr">info@lesmaisonettes.gr</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="map-container">
+                <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d781.9893282786825!2d26.8752429!3d37.7821245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bc159499c904d1%3A0xd4b909d83fba3318!2sLes%20Maisonettes!5e0!3m2!1sen!2sus!4v1702305583987!5m2!1sen!2sus"
+                        width="600"
+                        height="450"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="dress-code">
+    <h2 class="translate-dress-code-title">Dress Code</h2>
+    <div class="dress-code-container">
+        <div class="dress-code-category ladies">
+            <h3 data-pl="Dla Pań" data-el="Για τις Κυρίες">For Ladies</h3>
+            <p class="dress-description" data-pl="Długie suknie koktajlowe w pastelowych lub jasnych kolorach. Prosimy unikać białego koloru oraz bardzo jasnych odcieni, które mogą wyglądać jak biel na zdjęciach."
+               data-el="Μακριά κοκτέιλ φορέματα σε παστέλ ή ανοιχτά χρώματα. Παρακαλούμε αποφύγετε το λευκό και πολύ ανοιχτές αποχρώσεις που μπορεί να φαίνονται λευκές στις φωτογραφίες.">
+                Long cocktail dresses in pastel or light colors. Please avoid white and very light shades that might appear white in photos.
+            </p>
+            <div class="inspiration-images">
+                <div class="image-container">
+                    <img src="dress-example-1.jpg" alt="Ladies dress example 1"
+                         data-pl="Przykład sukienki 1" data-el="Παράδειγμα φορέματος 1">
+                    <p class="image-caption" data-pl="Przykład 1" data-el="Παράδειγμα 1">Example 1</p>
+                </div>
+                <div class="image-container">
+                    <img src="dress-example-2.jpg" alt="Ladies dress example 2"
+                         data-pl="Przykład sukienki 2" data-el="Παράδειγμα φορέματος 2">
+                    <p class="image-caption" data-pl="Przykład 2" data-el="Παράδειγμα 2">Example 2</p>
+                </div>
+            </div>
         </div>
 
-        <div class="faq-item">
-            <h3>Can I bring a plus one?</h3>
-            <p>Due to venue capacity, we can only accommodate those guests specifically named on the invitation.</p>
-        </div>
-
-        <div class="faq-item">
-            <h3>Is parking available?</h3>
-            <p>Yes, complimentary valet parking will be available at both the ceremony and reception venues.</p>
+        <div class="dress-code-category gentlemen">
+            <h3 data-pl="Dla Panów" data-el="Για τους Κυρίους">For Gentlemen</h3>
+            <p class="dress-description" data-pl="Jasny garnitur w kolorze beżowym lub jasnoszarym. Preferowana jasna koszula i pasujący krawat lub mucha. Możliwe są również kamizelki."
+               data-el="Ανοιχτόχρωμο κοστούμι σε μπεζ ή ανοιχτό γκρι. Προτιμάται ανοιχτόχρωμο πουκάμισο και ασορτί γραβάτα ή παπιγιόν. Τα γιλέκα είναι επίσης αποδεκτά.">
+                Light colored suit in beige or light grey. Light shirt and matching tie or bow tie preferred. Vests are also welcome.
+            </p>
+            <div class="inspiration-images">
+                <div class="image-container">
+                    <img src="suit-example-1.jpg" alt="Gentlemen suit example 1"
+                         data-pl="Przykład garnituru 1" data-el="Παράδειγμα κοστουμιού 1">
+                    <p class="image-caption" data-pl="Przykład 1" data-el="Παράδειγμα 1">Example 1</p>
+                </div>
+                <div class="image-container">
+                    <img src="suit-example-2.jpg" alt="Gentlemen suit example 2"
+                         data-pl="Przykład garnituru 2" data-el="Παράδειγμα κοστουμιού 2">
+                    <p class="image-caption" data-pl="Przykład 2" data-el="Παράδειγμα 2">Example 2</p>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
 <footer>
     <p>We can't wait to celebrate with you!</p>
-    <p>Contact us at: wedding@anastasiaandwiktor.com</p> <!-- Updated email -->
+    <p>Contact us at: +41 76 22 00 973 (Wiktor) and +41 76 20 63 635 (Anastasia) </p> <!-- Updated email -->
 </footer>
 </body>
 <script src="translations.js"></script>

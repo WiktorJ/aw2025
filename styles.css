@@ -10,32 +10,6 @@ body {
     color: #333;
 }
 
-/*nav {*/
-/*    background-color: #fff;*/
-/*    padding: 1rem;*/
-/*    position: fixed;*/
-/*    width: 100%;*/
-/*    top: 0;*/
-/*    z-index: 1000;*/
-/*    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);*/
-/*}*/
-
-/*nav ul {*/
-/*    display: flex;*/
-/*    justify-content: center;*/
-/*    list-style: none;*/
-/*}*/
-
-/*nav ul li {*/
-/*    margin: 0 2rem;*/
-/*}*/
-
-/*nav ul li a {*/
-/*    text-decoration: none;*/
-/*    color: #333;*/
-/*    font-weight: 500;*/
-/*}*/
-
 .nav-container {
     max-width: 1300px;
     margin: 0 auto;
@@ -215,97 +189,15 @@ section {
     text-align: center;
 }
 
-.details-container {
-    display: flex;
-    justify-content: center;
-    gap: 4rem;
-    margin-top: 2rem;
-}
-
-.detail-box {
-    background-color: #f9f9f9;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.rsvp-button, .registry-button {
-    display: inline-block;
-    padding: 1rem 2rem;
-    margin: 1rem;
-    background-color: #9c8167;
-    color: white;
-    text-decoration: none;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.rsvp-button:hover, .registry-button:hover {
-    background-color: #7d6753;
-}
-
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 2rem;
-}
-
 /*@media (max-width: 768px) {*/
-/*    nav ul {*/
+/*    .travel-container {*/
 /*        flex-direction: column;*/
-/*        text-align: center;*/
 /*    }*/
 
-/*    nav ul li {*/
-/*        margin: 0.5rem 0;*/
-/*    }*/
-
-/*    .details-container {*/
-/*        flex-direction: column;*/
-/*        gap: 2rem;*/
-/*    }*/
-
-/*    h1 {*/
-/*        font-size: 3rem;*/
+/*    .map-container {*/
+/*        height: 300px;*/
 /*    }*/
 /*}*/
-
-/* Previous CSS remains the same until .details-container */
-
-.place-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
-.place-info {
-    flex: 1;
-    min-width: 300px;
-    max-width: 500px;
-}
-
-.hotel-block {
-    background-color: #f9f9f9;
-    padding: 1.5rem;
-    margin: 1rem 0;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-@media (max-width: 768px) {
-    .travel-container {
-        flex-direction: column;
-    }
-
-    .map-container {
-        height: 300px;
-    }
-}
 
 .language-switcher {
     position: fixed;
@@ -338,68 +230,6 @@ footer {
     height: auto;
 }
 
-/*!* Adjust the nav padding to account for language switcher *!*/
-/*nav {*/
-/*    padding-top: 70px;*/
-/*}*/
-
-
-.venue-block {
-    background-color: #f9f9f9;
-    padding: 1.5rem;
-    margin: 1rem 0;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.venue-details h4 {
-    color: #9c8167;
-    margin-bottom: 0.5rem;
-}
-
-.venue-details .time {
-    font-size: 1.2rem;
-    font-weight: 500;
-    margin: 0.5rem 0;
-}
-
-.venue-details .note {
-    font-style: italic;
-    color: #666;
-    margin-top: 0.5rem;
-}
-
-.maps-container {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    flex: 1;
-}
-
-.map-block {
-    flex: 1;
-}
-
-.map-block h4 {
-    margin-bottom: 1rem;
-    color: #9c8167;
-}
-
-.map-block iframe {
-    width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-@media (max-width: 768px) {
-    .maps-container {
-        gap: 1rem;
-    }
-
-    .map-block iframe {
-        height: 250px;
-    }
-}
 #dress-code {
     background-color: #f9f9f9;
     padding: 4rem 2rem;
@@ -413,15 +243,22 @@ footer {
     padding: 2rem 0;
 }
 
+/* Updated styles for category boxes */
 .dress-code-category {
     flex: 1;
     text-align: center;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .dress-code-category h3 {
     color: #9c8167;
     font-size: 1.8rem;
     margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid rgba(156, 129, 103, 0.2);
 }
 
 .dress-description {
@@ -429,12 +266,14 @@ footer {
     margin-bottom: 2rem;
     line-height: 1.6;
     padding: 0 1rem;
+    color: #666;
 }
 
 .inspiration-images {
     display: flex;
     gap: 1.5rem;
     justify-content: center;
+    margin-top: 2rem;
 }
 
 .image-container {
@@ -461,10 +300,22 @@ footer {
     font-style: italic;
 }
 
+/* Title styles */
+#dress-code h2 {
+    text-align: center;
+    /*color: #9c8167;*/
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+}
+
 @media (max-width: 968px) {
     .dress-code-container {
         flex-direction: column;
         gap: 3rem;
+    }
+
+    .dress-code-category {
+        padding: 1.5rem;
     }
 
     .inspiration-images {
@@ -481,9 +332,19 @@ footer {
     }
 }
 
+/* Optional: Add hover effect to the boxes */
+.dress-code-category {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dress-code-category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
 #accommodation {
     padding: 4rem 2rem;
-    background-color: #fff;
+    background-color: #f9f9f9;
 }
 
 .accommodation-container {
@@ -505,7 +366,7 @@ footer {
 }
 
 .hotel-details {
-    background-color: #f9f9f9;
+    background-color: #fff;
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -530,10 +391,21 @@ footer {
     margin-bottom: 1rem;
 }
 
+#contact {
+    background-color: #f9f9f9;
+}
+
 .contact-info {
-    margin-top: 2rem;
-    padding-top: 2rem;
-    border-top: 1px solid #eee;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.contact-content {
+    text-align: center;
 }
 
 .contact-info h4 {
@@ -686,7 +558,7 @@ footer {
 
 #samos-guide {
     padding: 4rem 2rem;
-    background-color: #fff;
+    background-color: #f9f9f9;
 }
 
 .guide-container {
@@ -710,7 +582,7 @@ footer {
 }
 
 .recommendation-box {
-    background-color: #f9f9f9;
+    background-color: #fff;
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -734,7 +606,7 @@ footer {
 .attraction-card,
 .beach-card,
 .restaurant-card {
-    background-color: #f9f9f9;
+    background-color: #fff;
     padding: 1.5rem;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -949,7 +821,7 @@ footer {
 
 #afterparty {
     padding: 3rem 2rem;
-    background-color: #fff;
+    background-color: #f9f9f9;
     margin-top: -2rem; /* To connect with wedding day guide section */
 }
 
@@ -957,7 +829,7 @@ footer {
     max-width: 800px;
     margin: 0 auto;
     padding: 2rem;
-    background-color: #f9f9f9;
+    background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
@@ -966,11 +838,8 @@ footer {
     text-align: center;
 }
 
-.afterparty-content h2 {
-    color: #9c8167;
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-    font-family: 'Great Vibes', cursive;
+.afterparty-details {
+    text-align: left;
 }
 
 .date-time {
@@ -987,10 +856,6 @@ footer {
     font-size: 1.2rem;
     color: #9c8167;
     font-weight: 500;
-}
-
-.afterparty-details {
-    text-align: left;
 }
 
 .invitation {

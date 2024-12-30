@@ -101,7 +101,6 @@ body {
     transition: all 0.3s ease;
 }
 
-/* Mobile styles */
 @media (max-width: 768px) {
     .hamburger {
         display: block;
@@ -116,18 +115,43 @@ body {
         height: 100vh;
         background-color: white;
         flex-direction: column;
-        justify-content: center;
-        padding: 2rem;
+        padding: 80px 2rem 2rem 2rem;
         transition: right 0.3s ease;
         box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+
+        /* Remove overflow and justify-content */
+        display: flex;
+        gap: 0; /* Remove default gap */
     }
 
     .nav-menu.active {
         right: 0;
     }
 
+    /* Calculate height to fit all items */
     .nav-menu li {
-        margin: 1.5rem 0;
+        margin: 0; /* Remove margins */
+        padding: 10px 0; /* Add padding instead */
+        width: 100%;
+    }
+
+    .nav-menu li a {
+        display: block;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    /* Position language selector at the bottom */
+    .language-selector {
+        margin-top: auto; /* Push to bottom */
+        padding: 20px 0;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .language-selector button {
+        padding: 0.5rem 1rem;
     }
 
     /* Hamburger animation */
@@ -151,11 +175,6 @@ body {
     /* Adjust navbar height for mobile */
     .nav-container {
         height: 60px;
-    }
-
-    /* Language selector adjustments for mobile */
-    .language-selector {
-        margin-top: 2rem;
     }
 }
 
@@ -274,19 +293,6 @@ footer {
     background-color: #f9f9f9;
     padding: 1.5rem;
     margin: 1rem 0;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.map-container {
-    flex: 1;
-    min-width: 300px;
-    height: 450px;
-}
-
-.map-container iframe {
-    width: 100%;
-    height: 100%;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }

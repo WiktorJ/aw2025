@@ -100,7 +100,21 @@ function changeLanguage(lang) {
 
     // Update all elements with data-pl and data-el attributes
     document.querySelectorAll('[data-' + lang + ']').forEach(element => {
-        element.textContent = element.getAttribute('data-' + lang);
+        const text = element.getAttribute('data-' + lang);
+        element.textContent = text;
+
+        // Find the link URL and create a link element
+        const linkUrl = text.match(/https?:\/\/\S+/);
+        if (linkUrl) {
+            const link = document.createElement('a');
+            link.href = linkUrl[0];
+            link.target = '_blank';
+            link.rel = 'noopener noreferrer';
+            link.textContent = linkUrl[0];
+
+            // Replace the link URL in the text with the link element
+            element.innerHTML = element.innerHTML.replace(linkUrl[0], link.outerHTML);
+        }
     });
 
     // Update elements using the translations object
@@ -113,9 +127,8 @@ function changeLanguage(lang) {
 
     // Store the language preference
     localStorage.setItem('preferredLanguage', lang);
-}
+}// Set initial language based on stored preference or default to Polish
 
-// Set initial language based on stored preference or default to Polish
 document.addEventListener('DOMContentLoaded', () => {
     const storedLang = localStorage.getItem('preferredLanguage') || 'pl';
     changeLanguage(storedLang);

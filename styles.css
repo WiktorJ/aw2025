@@ -17,7 +17,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 80px;
+    height: 100px;
 }
 
 .navbar {
@@ -148,7 +148,7 @@ body {
 
     /* Adjust navbar height for mobile */
     .nav-container {
-        height: 60px;
+        height: 80px;
     }
 }
 
@@ -453,69 +453,6 @@ section {
     .hotel-details {
         padding: 1.5rem;
     }
-}
-
-#travel-to-samos {
-    padding: 4rem 2rem;
-    background-color: #f9f9f9;
-}
-
-.travel-info-container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.travel-options {
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-}
-
-.travel-option {
-    background-color: #fff;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.travel-option h3 {
-    color: #9c8167;
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
-    text-align: center;
-}
-
-.travel-option h4 {
-    color: #9c8167;
-    margin: 1.5rem 0 1rem;
-}
-
-.airport-info, .ferry-info {
-    margin-bottom: 2rem;
-}
-
-.flight-time, .journey-time {
-    font-size: 1.1rem;
-    color: #666;
-    margin: 1rem 0;
-}
-
-.flight-routes ul, .ports-info ul {
-    list-style: none;
-    padding: 0;
-}
-
-.flight-routes li {
-    margin: 1rem 0;
-    padding-left: 1.5rem;
-    position: relative;
-}
-
-.flight-routes li:before {
-    content: "✈️";
-    position: absolute;
-    left: 0;
-    top: 2px;
 }
 
 .ports-info li {
@@ -1241,5 +1178,111 @@ section {
     .hotel-links {
         flex-direction: column;
         gap: 10px;
+    }
+}
+
+#travel-to-samos {
+    padding: 4rem 2rem;
+    background-color: #f9f9f9;
+}
+
+.travel-info-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    line-height: 1.6; /* Improved readability */
+    font-family: 'Arial', sans-serif; /* Consistent font */
+}
+
+.travel-options {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.travel-option {
+    background-color: #fff;
+    padding: 2.5rem; /* Increased padding */
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease;
+}
+
+.travel-option:hover {
+    transform: translateY(-5px);
+}
+
+.travel-option h3 {
+    color: #826d58; /* Slightly darker for better contrast */
+    font-size: 2rem;
+    margin-bottom: 1.8rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.travel-option h4 {
+    color: #826d58;
+    font-size: 1.4rem;
+    margin: 1.8rem 0 1.2rem;
+    font-weight: 500;
+}
+
+.flight-time, .journey-time {
+    font-size: 1.15rem;
+    color: #444; /* Darker for better readability */
+    margin: 1.2rem 0;
+    font-weight: 500;
+}
+
+.flight-routes ul, .ports-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.flight-routes li {
+    margin: 1.2rem 0;
+    padding-left: 2rem;
+    position: relative;
+    line-height: 1.8;
+}
+
+.flight-routes li:before {
+    content: "✈️";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.airport-info, .ferry-info {
+    margin-bottom: 2.5rem;
+    padding: 1rem;
+    background-color: #fafafa;
+    border-radius: 8px;
+}
+
+/* Additional improvements */
+p {
+    margin: 1rem 0;
+    color: #333;
+}
+
+strong {
+    font-weight: 600;
+    color: #555;
+}
+
+/* For better responsive design */
+@media (max-width: 768px) {
+    .travel-option {
+        padding: 1.5rem;
+    }
+
+    .travel-option h3 {
+        font-size: 1.6rem;
+    }
+
+    .travel-option h4 {
+        font-size: 1.2rem;
     }
 }

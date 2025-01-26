@@ -33,15 +33,18 @@
             <li><a href="#wedding-day-guide" data-pl="Dzien Slubu" data-el="Ημέρα Γάμου">Wedding Day</a></li>
             <li><a href="#accommodation" data-pl="Zakwaterowanie" data-el="Κατάλυμα">Accommodation</a></li>
             <li><a href="#dress-code" data-pl="Ubiór" data-el="Ενδυματολογικός Κώδικας">Dress-code</a></li>
-            <li><a href="#afterparty" data-pl="Poprawiny" data-el="Afterparty">Dress-code</a></li>
+            <!--            <li><a href="#afterparty" data-pl="Poprawiny" data-el="Afterparty">Dress-code</a></li>-->
             <li><a href="#samos-guide" data-pl="Samos-Przewodnik" data-el="Οδηγός Σάμου">Samos Guide</a></li>
-            <li><a href="#contact" data-pl="Kontakt" data-el="Επαφή">Samos Guide</a></li>
+            <li><a href="#contact" data-pl="Kontakt" data-el="Επικοινωνία">Contact</a></li>
             <li class="language-selector">
                 <button class="lang-btn" onclick="changeLanguage('pl')">
                     <img src="pl-flag.png" alt="Polish"/> Polski
                 </button>
                 <button class="lang-btn" onclick="changeLanguage('el')">
                     <img src="el-flag.png" alt="Greek"/> Ελληνικά
+                </button>
+                <button class="lang-btn" onclick="changeLanguage('en')">
+                    <img src="en-flag.png" alt="English"/> English
                 </button>
             </li>
         </ul>
@@ -77,13 +80,12 @@
 </section>
 
 <section id="travel-to-samos">
-    <h2 class="translate-travel-to-samos-title">Getting to Samos</h2>
+    <h2 class="translate-travel-to-samos-title" data-pl="Jak dostać się na Samos" data-el="Πώς να φτάσετε στη Σάμο">
+        Getting to Samos</h2>
     <div class="travel-info-container">
         <div class="travel-options">
             <div class="travel-option air">
-                # TODO: fix visual
                 <h3 data-pl="Podróż Samolotem" data-el="Ταξίδι με Αεροπλάνο">Travel by Air</h3>
-
                 <h4 data-pl="Port Lotniczy Samos" data-el="Αεροδρόμιο Σάμου">Samos International Airport</h4>
                 <div class="map-container small">
                     <iframe
@@ -98,30 +100,40 @@
                 </div>
                 <div class="flight-routes">
                     <h4 data-pl="Opcje Lotów" data-el="Επιλογές Πτήσεων">Flight Options</h4>
-                    <ul>
-                        <li>
-                            Most common route: Flight to Athens, then connect to Samos. Alternatively, flight to
-                            Thessaloniki, then connect to Samos.
-                        </li>
-                        <li>
-                            During summer season, direct flights are available from some European cities (TODO: Add
-                            cities).
-                        </li>
-                    </ul>
+                    <div class="airport-info">
+                        <ul>
+                            <li data-pl="Najpopularniejsza trasa: Lot do Aten, następnie połączenie do Samos. Alternatywnie, lot do Salonik, następnie połączenie do Samos."
+                                data-el="Πιο συνηθισμένη διαδρομή: Πτήση προς Αθήνα, μετά σύνδεση με Σάμο. Εναλλακτικά, πτήση προς Θεσσαλονίκη, μετά σύνδεση με Σάμο.">
+                                Most common route: Flight to Athens, then connect to Samos. Alternatively, flight to
+                                Thessaloniki, then connect to Samos.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="airport-info">
+                        <ul>
+                            <li data-pl="W sezonie letnim dostępne są bezpośrednie loty z niektórych miast europejskich (np. Kraków, Katowice, Zurych, Monachium)."
+                                data-el="Κατά τη διάρκεια της καλοκαιρινής περιόδου, υπάρχουν απευθείας πτήσεις από ορισμένες ευρωπαϊκές πόλεις (π.χ. Κρακοβία, Κατοβίτσε, Ζυρίχη, Μόναχο).">
+                                During summer season, direct flights are available from some European cities (e.g.
+                                Krakow, Katowice, Zurich, Munich).
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="airport-info">
-                    <p class="flight-time">
-                        We recommend to check [GOOGLE FLIGHTS] as they offer the best coverage of flight connections to
+                    <p data-pl="Polecamy sprawdzić https://flights.google.com, ponieważ oferują najlepsze pokrycie połączeń lotniczych do Grecji (możesz także ustawić powiadomienia o cenach i połączeniach)."
+                       data-el="Συνιστούμε να ελέγξετε το https://flights.google.com καθώς προσφέρει την καλύτερη κάλυψη πτήσεων προς την Ελλάδα (μπορείτε επίσης να ρυθμίσετε ειδοποιήσεις για τιμές και συνδέσεις).">
+                        We recommend to check https://flights.google.com/  as they
+                        offer the best coverage of flight connections to
                         Greece (you can also setup alerts for prices and connections).
                     </p>
-                    <p>
+                    <p data-pl="Możesz również sprawdzić bezpośrednio na stronie greckich linii lotniczych Aegean (ulubione linie lotnicze Anastazji) i Sky Express, ponieważ najprawdopodobniej oferują loty do Grecji i na Samos. Dodatkowo możesz sprawdzić bezpośrednio na stronie swoich lokalnych linii lotniczych (np. Lufthansa, Swiss, Lot)."
+                       data-el="Μπορείτε επίσης να ελέγξετε απευθείας στην ιστοσελίδα των ελληνικών αεροπορικών εταιρειών Aegean (η αγαπημένη αεροπορική εταιρεία της Αναστασίας) και Sky Express, καθώς είναι πιο πιθανό να προσφέρουν πτήσεις προς την Ελλάδα και τη Σάμο. Επιπλέον, μπορείτε να ελέγξετε απευθείας στην ιστοσελίδα των τοπικών αεροπορικών εταιρειών σας (π.χ. Lufthansa, Swiss, Lot).">
                         You can also check directly on the website of the Greek Airlines Aegean (Anastasia's favourite
                         airlines) and Sky
                         Express, as they are most likely to offer flights to Greece and Samos. Additionally, you can
                         also check directly on the website your local airlines (e.g. Lufthansa, Swiss, Lot).
                     </p>
                 </div>
-
             </div>
 
             <div class="travel-option sea">
@@ -201,7 +213,7 @@
 </section>
 
 <section id="accommodation">
-    <h2 class="translate-accommodation-title">Where to Stay</h2>
+    <h2 class="translate-accommodation-title" data-pl="Gdzie się zatrzymać" data-el="Πού να μείνετε">Where to Stay</h2>
     <div class="accommodation-container">
         <div class="primary-accommodation">
             <h3 class="section-subtitle"
@@ -210,58 +222,12 @@
                 Your Stay for the Wedding Night
             </h3>
 
-            <p class="booking-info"
-               data-pl="Mamy zarezerwowane pokoje w Dina Pension i Hokkum Studios na noc z 23 na 24 sierpnia 2025."
-               data-el="Έχουμε κρατήσει δωμάτια στο Dina Pension και Hokkum Studios για τη νύχτα 23-24 Αυγούστου 2025.">
-                We've got you covered for the wedding night (August 23-24, 2025) with rooms booked at these lovely spots
-                in Kokkari:
-            </p>
-
-            <div class="booked-hotels">
-                <div class="hotel-card">
-                    <span class="hotel-name">Dina Pension</span>
-                    <div class="hotel-links">
-                        <a href="https://www.booking.com/hotel/gr/dina-pension-kokkari.en-gb.html" class="booking-link"
-                           target="_blank"
-                           data-pl="Zobacz na Booking.com"
-                           data-el="Δείτε στο Booking.com">
-                            📱 Booking.com
-                        </a>
-                        <a href="https://goo.gl/maps/rGJ8rnrYxP9yFHjS6" class="map-link" target="_blank"
-                           data-pl="Zobacz na mapie"
-                           data-el="Δείτε στο χάρτη">
-                            📍 Map
-                        </a>
-                    </div>
-                </div>
-
-                <div class="hotel-card">
-                    <span class="hotel-name">Hokkum Studios</span>
-                    <div class="hotel-links">
-                        <a href="https://www.booking.com/hotel/gr/hokkum-studios.en-gb.html" class="booking-link"
-                           target="_blank"
-                           data-pl="Zobacz na Booking.com"
-                           data-el="Δείτε στο Booking.com">
-                            📱 Booking.com
-                        </a>
-                        <a href="https://goo.gl/maps/LQX4H8vV8QZE85fu5" class="map-link" target="_blank"
-                           data-pl="Zobacz na mapie"
-                           data-el="Δείτε στο χάρτη">
-                            📍 Map
-                        </a>
-                    </div>
-                </div>
-            </div>
-
             <div class="booking-process">
-                <h4 data-pl="Jak to działa?"
-                    data-el="Πώς λειτουργεί;">
-                    How does it work?
-                </h4>
-                <p data-pl="To proste! Gdy potwierdzicie swoją obecność na weselu, dostaniecie informację w którym hotelu macie pokój. Jeśli chcielibyście zostać dłużej - żaden problem! Po prostu skontaktujcie się bezpośrednio z hotelem."
-                   data-el="Είναι απλό! Μόλις επιβεβαιώσετε τη συμμετοχή σας στο γάμο, θα σας ενημερώσουμε σε ποιο ξενοδοχείο έχετε δωμάτιο. Αν θέλετε να μείνετε περισσότερο - κανένα πρόβλημα! Απλά επικοινωνήστε απευθείας με το ξενοδοχείο.">
-                    It's super simple! Once you confirm you're coming to the wedding, we'll let you know which hotel
-                    you'll be staying at. Want to extend your stay? No problem! Just reach out to the hotel directly.
+                <p data-pl="Zarezerwowaliśmy dla Was hotel na dzień ślubu (23-24 sierpnia). Prosimy o informację, czy chcecie z niego skorzystać (być może uda się przedłużyć rezerwację na poprzednią noc, 22-23 sierpnia), czy wolicie zarezerwować zakwaterowanie we własnym zakresie."
+                   data-el="Έχουμε κάνει κράτηση σε ξενοδοχείο για εσάς για το γάμο (23-24 Αυγούστου). Παρακαλούμε ενημερώστε μας εάν θέλετε να το χρησιμοποιήσετε (υπάρχει δυνατότητα επέκτασης της κράτησης για την προηγούμενη νύχτα, 22-23 Αυγούστου) ή εάν προτιμάτε να κάνετε κράτηση καταλύματος μόνοι σας.">
+                    We have booked a hotel for you for the wedding day (August 23-24). Please let us know whether you want
+                    to use it (there may be a possibility to extend the reservation for the previous night, August
+                    22-23) or whether you would prefer to book accommodation on your own.
                 </p>
             </div>
         </div>
@@ -269,16 +235,10 @@
 
         <div class="alternative-accommodation">
             <h3 class="section-subtitle"
-                data-pl="Inne fajne miejsca do zatrzymania się"
+                data-pl="Inne dobre miejsca do zatrzymania się"
                 data-el="Άλλα ωραία μέρη για να μείνετε">
                 Other Cool Places to Stay
             </h3>
-
-            <p class="intro-text"
-               data-pl="Planujecie zostać dłużej? Oto nasze ulubione miejscówki na wyspie:"
-               data-el="Σχεδιάζετε να μείνετε περισσότερο; Αυτά είναι τα αγαπημένα μας μέρη στο νησί:">
-                Planning a longer stay? Here are our favorite spots on the island:
-            </p>
 
             <div class="locations-grid">
                 <div class="location-card">
@@ -288,7 +248,8 @@
                         The island's capital and where all the action is! Perfect base if you want to explore everything
                         Samos has to offer.
                     </p>
-                    <a href="https://goo.gl/maps/1Z8Z8Z8Z8Z8Z8Z8Z8" class="map-link" target="_blank"
+                    <a href="https://www.google.com/maps/place/Samos+831+00,+Greece/@37.7495953,26.9807984,16z/data=!3m1!4b1!4m6!3m5!1s0x14bc17897421983d:0x7b2752f6e61b58c6!8m2!3d37.7497172!4d26.981879!16zL20vMGIyeXRu?entry=ttu&g_ep=EgoyMDI1MDEyMi4wIKXMDSoASAFQAw%3D%3D"
+                       class="map-link" target="_blank"
                        data-pl="Zobacz na mapie"
                        data-el="Δείτε στο χάρτη">
                         📍 Check it on the map
@@ -296,25 +257,28 @@
                 </div>
 
                 <div class="location-card">
-                    <h4>Pythagorio</h4>
-                    <p>
-                        Cute town near the airport. Fun fact: yes, it's named after Pythagoras, the famous
+                    <h4 data-pl="Pythagorio" data-el="Πυθαγόρειο">Pythagorio</h4>
+                    <p data-pl="Urocze miasteczko w pobliżu lotniska. Ciekawostka: tak, zostało nazwane na cześć Pitagorasa, słynnego greckiego filozofa, który tam mieszkał."
+                       data-el="Όμορφη πόλη κοντά στο αεροδρόμιο. Ενδιαφέρον γεγονός: ναι, πήρε το όνομά του από τον Πυθαγόρα, τον διάσημο Έλληνα φιλόσοφο που ζούσε εκεί.">
+                        Cute town near the airport. Interesting fact: yes, it's named after Pythagoras, the famous
                         Greek philosopher that used to live there.
                     </p>
-                    <a href="https://goo.gl/maps/2Y8Y8Y8Y8Y8Y8Y8Y8" class="map-link" target="_blank"
+                    <a href="https://www.google.com/maps/place/Pythagoreio+831+03,+Greece/@37.6903243,26.9393484,17z/data=!3m1!4b1!4m6!3m5!1s0x14bc3dd3bae69d1f:0xf3df2f3c3a2fec3f!8m2!3d37.6899431!4d26.9426018!16zL20vMGcwMmJu?entry=ttu&g_ep=EgoyMDI1MDEyMi4wIKXMDSoASAFQAw%3D%3D"
+                       class="map-link" target="_blank"
                        data-pl="Zobacz na mapie"
                        data-el="Δείτε στο χάρτη">
                         📍 Check it on the map
                     </a>
                 </div>
-
                 <div class="location-card">
-                    <h4>Kokkari</h4>
-                    <p>
+                    <h4 data-pl="Kokkari" data-el="Κοκκάρι">Kokkari</h4>
+                    <p data-pl="W tej przytulnej wiosce odbędzie się nasz ślub! Pomyśl o wąskich uliczkach, uroczych plażach i najpiękniejszych zachodach słońca."
+                       data-el="Σε αυτό το γραφικό χωριό θα γίνει ο γάμος μας! Σκεφτείτε στενά δρομάκια, υπέροχες παραλίες και τα καλύτερα ηλιοβασιλέματα.">
                         This cozy village is where our wedding will be! Think narrow streets, lovely beaches,
                         and the best sunsets.
                     </p>
-                    <a href="https://goo.gl/maps/3X8X8X8X8X8X8X8X8" class="map-link" target="_blank"
+                    <a href="https://www.google.com/maps/place/Kokkari+831+00,+Greece/@37.7783594,26.8896526,17z/data=!3m1!4b1!4m6!3m5!1s0x14bc16789474ca3b:0x8b767dba0c511e3!8m2!3d37.7783594!4d26.8922275!16s%2Fg%2F11c2vgph58?entry=ttu&g_ep=EgoyMDI1MDEyMi4wIKXMDSoASAFQAw%3D%3D"
+                       class="map-link" target="_blank"
                        data-pl="Zobacz na mapie"
                        data-el="Δείτε στο χάρτη">
                         📍 Check it on the map
@@ -327,7 +291,8 @@
 
 
 <section id="wedding-day-guide">
-    <h2 class="translate-wedding-day-title">Wedding Day Guide</h2>
+    <h2 class="translate-wedding-day-title" data-pl="Plan Dnia Ślubu" data-el="Οδηγός της Ημέρας του Γάμου">Wedding Day
+        Guide</h2>
     <div class="timeline-container">
         <!-- Timeline Header -->
         <div class="date-header">
@@ -343,7 +308,8 @@
                 </div>
                 <div class="event-content highlight">
                     <h4 data-pl="Ceremonia Ślubna" data-el="Γαμήλια Τελετή">Wedding Ceremony</h4>
-                    <p>
+                    <p data-pl="Ceremonia odbędzie się w Ratuszu w Samos. Ceremonia potrwa około 15 minut. Następnie będzie czas na złożenie życzeń parze młodej i zrobienie grupowych zdjęć w Ratuszu."
+                       data-el="Η τελετή θα πραγματοποιηθεί στο Δημαρχείο της Σάμου. Η τελετή θα διαρκέσει περίπου 15 λεπτά. Στη συνέχεια θα υπάρχει χρόνος για να συγχαρείτε το ζευγάρι και να βγάλετε ομαδικές φωτογραφίες στο Δημαρχείο.">
                         The ceremony will take place at Samos Townhall. The ceremony will last approximately 15min.
                         Afterwards there will be time to congratulate the couple and take some group photos in the
                         Townhall.
@@ -354,14 +320,12 @@
                             Themistokli Sofouli, Samos 831 00, Greece
                         </p>
                         <div class="map-container mini">
-                            <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1571.9533935441614!2d26.976064700000003!3d37.7532603!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bc1785fa67eceb%3A0x22aa86c15fb58ef2!2sEastern%20Samos%20City%20Hall!5e0!3m2!1sen!2sus!4v1702304674961!5m2!1sen!2sus">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1571.9533935441614!2d26.976064700000003!3d37.7532603!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bc1785fa67eceb%3A0x22aa86c15fb58ef2!2sEastern%20Samos%20City%20Hall!5e0!3m2!1sen!2sus!4v1702304674961!5m2!1sen!2sus">
                             </iframe>
                         </div>
                     </div>
                 </div>
             </div>
-
             <!-- Reception -->
             <div class="timeline-event">
                 <div class="time-block">
@@ -369,10 +333,10 @@
                 </div>
                 <div class="event-content">
                     <h4 data-pl="Przyjęcie Weselne" data-el="Γαμήλια Δεξίωση">Wedding Reception</h4>
-                    <p>
+                    <p data-pl="Powitalny drink w miejscu przyjęcia. Podczas gdy goście będą się bawić i poznawać, para młoda będzie miała krótką sesję zdjęciową. Dojazd z Ratusza zajmuje około 15 minut samochodem."
+                       data-el="Καλωσόρισμα με ποτό στον χώρο της δεξίωσης. Ενώ απολαμβάνετε τα ποτά σας και γνωρίζεστε μεταξύ σας, το ζευγάρι θα έχει μια σύντομη φωτογράφιση. Χρειάζονται περίπου 15 λεπτά με το αυτοκίνητο από το Δημαρχείο.">
                         Welcome drink at the reception place. While you are enjoying your drinks and
                         getting to know each other, the couple will have a short photo shooting session.
-
                         It takes around 15min by car to get there from the Townhall.
                     </p>
                     <div class="location-details">
@@ -381,8 +345,7 @@
                             Kokkari 831 00, Samos, Greece
                         </p>
                         <div class="map-container mini">
-                            <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3147.8172947436775!2d26.870751!3d37.7827022!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bc15cef31865d5%3A0x9c9b87dccdbd4ce!2sAndreas%20Place!5e0!3m2!1sen!2sus!4v1702304674961!5m2!1sen!2sus">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3147.8172947436775!2d26.870751!3d37.7827022!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bc15cef31865d5%3A0x9c9b87dccdbd4ce!2sAndreas%20Place!5e0!3m2!1sen!2sus!4v1702304674961!5m2!1sen!2sus">
                             </iframe>
                         </div>
                     </div>
@@ -399,8 +362,9 @@
                     <h4>21:00-04:00</h4>
                 </div>
                 <div class="event-content">
-                    <h4>Wedding Party</h4>
-                    <p>
+                    <h4 data-pl="Wesele" data-el="Γαμήλιο Πάρτι">Wedding Party</h4>
+                    <p data-pl="Po przyjeździe pary młodej rozpocznie się zabawa!"
+                       data-el="Μετά την άφιξη του ζευγαριού, το πάρτι θα ξεκινήσει!">
                         After the couple arrives, the party will start!
                     </p>
                 </div>
@@ -410,8 +374,9 @@
                     <h4>04:30</h4>
                 </div>
                 <div class="event-content">
-                    <h4>Return to hotel</h4>
-                    <p>
+                    <h4 data-pl="Powrót do hotelu" data-el="Επιστροφή στο ξενοδοχείο">Return to hotel</h4>
+                    <p data-pl="Zapewnimy transport powrotny do hoteli około godziny 04:30."
+                       data-el="Θα παρέχουμε μεταφορά πίσω στα ξενοδοχεία σας γύρω στις 04:30.">
                         We will provide transportation back to your hotels at around 04:30.
                     </p>
                 </div>
@@ -422,13 +387,15 @@
 
 
 <section id="dress-code">
-    <h2 class="translate-dress-code-title">Dress Code</h2>
+    <h2 data-pl="Dress Code" data-el="Ενδυματολογικός Κώδικας">Dress Code</h2>
     <div class="dress-code-container">
         <div class="dress-code-category ladies">
             <h3 data-pl="Dla Pań" data-el="Για τις Κυρίες">For Ladies</h3>
-            <p class="dress-description">
+            <p class="dress-description"
+               data-pl="Strój nie musi być bardzo formalny. Zalecamy lekki ubiór, ponieważ będzie bardzo ciepło. Prosimy tylko o unikanie białych i jasnoniebieskich sukienek!"
+               data-el="Η ενδυμασία δεν χρειάζεται να είναι πολύ επίσημη. Συνιστούμε ελαφρύ ντύσιμο καθώς θα κάνει πολύ ζέστη. Σας παρακαλούμε μόνο να αποφύγετε τα λευκά και γαλάζια φορέματα!">
                 The attire does not have to be very formal. We recommend light outfit as it will be very warm. We only
-                ask you to <b> avoid white and baby blue </b> dresses!
+                ask you to <b>avoid white and baby blue</b> dresses!
             </p>
             <div class="inspiration-images">
                 <div class="image-container">
@@ -437,16 +404,17 @@
                     <p class="image-caption" data-pl="Przykład 1" data-el="Παράδειγμα 1">Example 1</p>
                 </div>
                 <div class="image-container">
-                    <img src="dress_2.jpg" alt="Ladies dress example 2"
+                    <img src="dress_3.jpg" alt="Ladies dress example 2"
                          data-pl="Przykład sukienki 2" data-el="Παράδειγμα φορέματος 2">
                     <p class="image-caption" data-pl="Przykład 2" data-el="Παράδειγμα 2">Example 2</p>
                 </div>
             </div>
         </div>
-
         <div class="dress-code-category gentlemen">
             <h3 data-pl="Dla Panów" data-el="Για τους Κυρίους">For Gentlemen</h3>
-            <p class="dress-description">
+            <p class="dress-description"
+               data-pl="Podobnie jak w przypadku pań, pełne garnitury formalne nie są konieczne (ale nie są też zabronione). Wybierzcie coś, co będzie wygodne w ciepłych warunkach. Prosimy tylko o unikanie beżowych/jasnobrązowych garniturów, ponieważ taki będzie miał na sobie pan młody."
+               data-el="Όπως και για τις κυρίες, τα πλήρη επίσημα κοστούμια δεν είναι απαραίτητα (αλλά ούτε και απαγορεύονται). Επιλέξτε κάτι που να είναι άνετο σε ζεστές συνθήκες. Σας παρακαλούμε μόνο να αποφύγετε τα μπεζ/ανοιχτά καφέ κοστούμια, καθώς αυτό θα φοράει ο γαμπρός.">
                 Similarly as for ladies, full formal suits are not necessary (but not forbidden also). Chose something
                 that feels pleasant in warm conditions. We only ask you to avoid beige/light brown suits, as this it
                 what the groom will wear.
@@ -506,7 +474,8 @@
 
 
 <section id="samos-guide">
-    <h2 class="translate-samos-guide-title">Quick Guide to Samos</h2>
+    <h2 class="translate-samos-guide-title" data-pl="Krótki Przewodnik po Samos" data-el="Σύντομος Οδηγός για τη Σάμο">
+        Quick Guide to Samos</h2>
     <div class="guide-container">
         <!-- Getting Around -->
         <div class="guide-section transport">
@@ -630,7 +599,7 @@
 </section>
 
 <section id="contact">
-    <h2 class="translate-contact-title">Contact Us</h2>
+    <h2 class="translate-contact-title" data-pl="Skontaktuj się z nami" data-el="Επικοινωνήστε μαζί μας">Contact Us</h2>
     <div class="contact-container">
         <div class="contact-info">
             <div class="contact-intro">

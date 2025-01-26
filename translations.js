@@ -1,7 +1,5 @@
 const translations = {
     pl: {
-        'wedding-announcement': 'Pobierają się!',
-        'ceremony-title': 'Ceremonia',
         'reception-title': 'Przyjęcie',
         'place-title': 'Miejsce Slubu i Wesela',
         'faq-title': 'Często Zadawane Pytania',
@@ -46,8 +44,6 @@ const translations = {
         'contact-title': 'Kontakt',
         'contact-intro': 'W razie jakichkolwiek pytań, prosimy o kontakt',
     }, el: {
-        'wedding-announcement': 'Παντρεύονται!',
-        'ceremony-title': 'Τελετή',
         'reception-title': 'Δεξίωση',
         'place-title': 'Χώρος Γάμου',
         'faq-title': 'Συχνές Ερωτήσεις',
@@ -95,39 +91,49 @@ const translations = {
     }
 };
 
+document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('[data-pl],[data-el]').forEach(element => {
+        element.setAttribute('data-en', element.textContent);
+    });
+});
+
 function changeLanguage(lang) {
     document.documentElement.lang = lang;
 
-    // Update all elements with data-pl and data-el attributes
-    document.querySelectorAll('[data-' + lang + ']').forEach(element => {
-        const text = element.getAttribute('data-' + lang);
-        element.textContent = text;
+    // Update all elements with data attributes
+    document.querySelectorAll('[data-pl],[data-el]').forEach(element => {
+        let text;
+        text = element.getAttribute('data-' + lang);
 
-        // Find the link URL and create a link element
-        const linkUrl = text.match(/https?:\/\/\S+/);
-        if (linkUrl) {
-            const link = document.createElement('a');
-            link.href = linkUrl[0];
-            link.target = '_blank';
-            link.rel = 'noopener noreferrer';
-            link.textContent = linkUrl[0];
-
-            // Replace the link URL in the text with the link element
-            element.innerHTML = element.innerHTML.replace(linkUrl[0], link.outerHTML);
+        if (text) {
+            element.textContent = text;
+            // Find the link URL and create a link element
+            const linkUrl = text.match(/https?:\/\/\S+/);
+            if (linkUrl) {
+                const link = document.createElement('a');
+                link.href = linkUrl[0];
+                link.target = '_blank';
+                link.rel = 'noopener noreferrer';
+                link.textContent = linkUrl[0];
+                // Replace the link URL in the text with the link element
+                element.innerHTML = element.innerHTML.replace(linkUrl[0], link.outerHTML);
+            }
         }
     });
 
-    // Update elements using the translations object
-    Object.keys(translations[lang]).forEach(key => {
-        const elements = document.getElementsByClassName('translate-' + key);
-        for (let element of elements) {
-            element.textContent = translations[lang][key];
-        }
-    });
+    // // Update elements using the translations object
+    // if (translations[lang]) {
+    //     Object.keys(translations[lang]).forEach(key => {
+    //         const elements = document.getElementsByClassName('translate-' + key);
+    //         for (let element of elements) {
+    //             element.textContent = translations[lang][key];
+    //         }
+    //     });
+    // }
 
     // Store the language preference
     localStorage.setItem('preferredLanguage', lang);
-}// Set initial language based on stored preference or default to Polish
+}
 
 document.addEventListener('DOMContentLoaded', () => {
     const storedLang = localStorage.getItem('preferredLanguage') || 'pl';
